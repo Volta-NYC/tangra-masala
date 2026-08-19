@@ -19,7 +19,7 @@ export default function Home() {
         style={{ backgroundImage: `url(${images.hero})` }}
       >
         <div className="hero-content-grid">
-          <div className="scroll-reveal reveal-left is-visible">
+          <div className="hero-copy-block scroll-reveal reveal-left is-visible">
             <p className="eyebrow text-gold">Elmhurst Indo-Chinese kitchen</p>
             <h1 className="hero-title scroll-headline mt-5 font-serif">
               Tangra Masala.

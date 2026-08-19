@@ -284,6 +284,10 @@ a {
   width: 100%;
 }
 
+.hero-copy-block {
+  transform: translateY(-2.5rem);
+}
+
 .hero-title {
   color: var(--cream);
   font-size: clamp(4.75rem, 11vw, 11rem);
@@ -734,5 +738,9 @@ a {
 @media (min-width: 1024px) {
   .hero-content-grid {
     grid-template-columns: minmax(0, 1.12fr) minmax(26rem, 0.88fr);
+  }
+
+  .hero-copy-block {
+    transform: translateY(-5rem);
   }
 }
