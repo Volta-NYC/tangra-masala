@@ -13,20 +13,20 @@ type MenuItem = (typeof menuSections)[number]["items"][number];
 
 export function SiteHeader() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-forest/20 bg-paper/78 text-ink backdrop-blur">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-cream/12 bg-[#0f2419]/88 text-cream backdrop-blur">
       <div className="scroll-progress" />
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
         <Link className="leading-none" href="/" aria-label="Tangra Masala home">
-          <span className="block font-serif text-2xl font-black uppercase">
+          <span className="block font-serif text-3xl font-black">
             Tangra Masala
           </span>
-          <span className="mt-1 block text-[0.68rem] font-bold uppercase text-red">
+          <span className="mt-1 block text-[0.72rem] font-black uppercase text-gold">
             Elmhurst
           </span>
         </Link>
 
         <nav
-          className="hidden items-center gap-8 text-xs font-bold uppercase text-ink/68 md:flex"
+          className="hidden items-center gap-8 text-xs font-black uppercase text-cream/68 md:flex"
           aria-label="Primary navigation"
         >
           {navItems.map((item) => (

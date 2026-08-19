@@ -4,10 +4,11 @@
 
 :root {
   --paper: #edf6ef;
-  --cream: #fbfff7;
+  --cream: #fffaf0;
   --ink: #14251c;
   --forest: #6f9f7c;
-  --forest-dark: #315d44;
+  --forest-dark: #244c36;
+  --forest-deep: #0f2419;
   --forest-soft: rgb(111 159 124 / 0.22);
   --red: #b64a34;
   --gold: #d8a84a;
@@ -109,14 +110,13 @@ a {
 }
 
 .font-serif {
-  font-family: "Arial Narrow", "Roboto Condensed", "Avenir Next Condensed",
-    "Helvetica Neue", Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", ui-serif, serif;
   letter-spacing: 0;
 }
 
 .button {
   align-items: center;
-  border-radius: 0;
+  border-radius: 999px;
   display: inline-flex;
   font-size: 0.74rem;
   font-weight: 900;
@@ -139,7 +139,7 @@ a {
 }
 
 .button-gold {
-  background: rgb(216 168 74 / 0.86);
+  background: rgb(216 168 74 / 0.95);
   color: var(--ink);
 }
 
@@ -157,12 +157,12 @@ a {
 }
 
 .button-outline-light {
-  border: 1px solid rgb(246 239 223 / 0.42);
-  color: var(--paper);
+  border: 1px solid rgb(255 250 240 / 0.48);
+  color: var(--cream);
 }
 
 .button-outline-light:hover {
-  background: var(--paper);
+  background: var(--cream);
   color: var(--ink);
 }
 
@@ -221,7 +221,7 @@ a {
 }
 
 .nav-link:hover {
-  color: var(--forest-dark);
+  color: var(--cream);
 }
 
 .nav-link:hover::after {
@@ -245,44 +245,95 @@ a {
 }
 
 .hero-shell {
-  display: grid;
+  background-position: center;
+  background-size: cover;
+  color: var(--cream);
+  display: flex;
+  isolation: isolate;
   min-height: 100vh;
-  padding: 7.5rem 1.25rem 3rem;
-}
-
-.hero-panel {
-  background: rgb(237 246 239 / 0.72);
-  border-left: 8px solid rgb(111 159 124 / 0.82);
-  box-shadow: 0 28px 80px rgb(20 37 28 / 0.2);
-}
-
-.hero-photo-stack {
-  display: grid;
-  gap: 1rem;
-}
-
-.hero-photo {
-  min-height: 15rem;
   overflow: hidden;
+  padding: 8.5rem 1.25rem 4rem;
   position: relative;
 }
 
-.hero-photo img,
+.hero-shell::before {
+  background:
+    linear-gradient(90deg, rgb(15 36 25 / 0.88), rgb(36 76 54 / 0.7), rgb(111 159 124 / 0.42)),
+    linear-gradient(0deg, rgb(15 36 25 / 0.84), transparent 48%);
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.hero-shell::after {
+  background: rgb(111 159 124 / 0.24);
+  content: "";
+  inset: 0;
+  mix-blend-mode: soft-light;
+  position: absolute;
+  z-index: -1;
+}
+
+.hero-content-grid {
+  align-items: end;
+  display: grid;
+  gap: 3rem;
+  margin: auto;
+  max-width: 88rem;
+  width: 100%;
+}
+
+.hero-title {
+  color: var(--cream);
+  font-size: clamp(4.75rem, 11vw, 11rem);
+  font-weight: 900;
+  line-height: 0.86;
+  max-width: 11ch;
+  text-transform: none;
+}
+
+.hero-copy {
+  color: rgb(255 250 240 / 0.86);
+  font-size: clamp(1.05rem, 1.7vw, 1.45rem);
+  line-height: 1.75;
+  max-width: 42rem;
+}
+
+.signature-panel {
+  background: rgb(15 36 25 / 0.42);
+  border: 1px solid rgb(255 250 240 / 0.5);
+  box-shadow: 0 28px 80px rgb(15 36 25 / 0.28);
+  color: var(--cream);
+  padding: clamp(1.5rem, 3vw, 2.75rem);
+}
+
+.signature-panel-row {
+  align-items: center;
+  border-bottom: 1px solid rgb(255 250 240 / 0.38);
+  display: flex;
+  font-family: Georgia, "Times New Roman", ui-serif, serif;
+  font-size: clamp(1.7rem, 3.5vw, 3rem);
+  font-weight: 900;
+  gap: 1.25rem;
+  justify-content: space-between;
+  line-height: 1.05;
+  padding: 1rem 0;
+}
+
+.signature-panel-row:first-of-type {
+  padding-top: 0.4rem;
+}
+
+.signature-panel-row span:last-child {
+  color: var(--gold);
+  font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
 .menu-strip img {
   height: 100%;
   object-fit: cover;
   width: 100%;
-}
-
-.hero-photo:first-child {
-  min-height: 24rem;
-}
-
-.hero-photo::after {
-  background: linear-gradient(to top, rgb(20 37 28 / 0.42), transparent);
-  content: "";
-  inset: 0;
-  position: absolute;
 }
 
 .kitchen-board {
@@ -677,5 +728,11 @@ a {
 @media (max-width: 520px) {
   .button:not(.button-fit) {
     width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-content-grid {
+    grid-template-columns: minmax(0, 1.12fr) minmax(26rem, 0.88fr);
   }
 }
