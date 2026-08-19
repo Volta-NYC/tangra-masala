@@ -23,7 +23,7 @@ export default function MenuPage() {
           <div className="scroll-reveal reveal-up mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="eyebrow text-red">Highlights</p>
-              <h2 className="mt-4 font-serif text-4xl font-black leading-tight sm:text-5xl">
+              <h2 className="mt-4 font-serif text-4xl font-black uppercase leading-tight sm:text-5xl">
                 Built around the wok and the sauce.
               </h2>
             </div>

@@ -13,20 +13,20 @@ type MenuItem = (typeof menuSections)[number]["items"][number];
 
 export function SiteHeader() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-forest/92 text-paper backdrop-blur">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-forest/20 bg-paper/78 text-ink backdrop-blur">
       <div className="scroll-progress" />
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
         <Link className="leading-none" href="/" aria-label="Tangra Masala home">
-          <span className="block font-serif text-2xl font-bold tracking-wide">
+          <span className="block font-serif text-2xl font-black uppercase">
             Tangra Masala
           </span>
-          <span className="mt-1 block text-[0.62rem] font-bold uppercase tracking-[0.28em] text-gold">
+          <span className="mt-1 block text-[0.68rem] font-bold uppercase text-red">
             Elmhurst
           </span>
         </Link>
 
         <nav
-          className="hidden items-center gap-8 text-xs font-bold uppercase tracking-[0.18em] text-paper/70 md:flex"
+          className="hidden items-center gap-8 text-xs font-bold uppercase text-ink/68 md:flex"
           aria-label="Primary navigation"
         >
           {navItems.map((item) => (
@@ -46,11 +46,11 @@ export function SiteHeader() {
 
 export function SiteFooter() {
   return (
-    <footer className="footer-glow relative overflow-hidden bg-black px-5 py-14 text-paper sm:px-8">
+    <footer className="footer-glow relative overflow-hidden bg-forest px-5 py-14 text-ink sm:px-8">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.6fr_1fr]">
         <div className="scroll-reveal reveal-left">
-          <p className="font-serif text-4xl font-bold">{site.name}</p>
-          <p className="mt-4 max-w-xl text-sm leading-6 text-paper/58">
+          <p className="font-serif text-4xl font-black uppercase">{site.name}</p>
+          <p className="mt-4 max-w-xl text-sm leading-6 text-ink/64">
             {site.description}
           </p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -65,16 +65,16 @@ export function SiteFooter() {
 
         <div className="scroll-reveal reveal-up reveal-stagger-1">
           <h3 className="footer-title">Explore</h3>
-          <div className="mt-5 grid gap-3 text-sm text-paper/62">
+          <div className="mt-5 grid gap-3 text-sm text-ink/68">
             {navItems.map((item) => (
-              <Link className="transition hover:text-paper" href={item.href} key={item.href}>
+              <Link className="transition hover:text-cream" href={item.href} key={item.href}>
                 {item.label}
               </Link>
             ))}
-            <a className="transition hover:text-paper" href={site.yelpUrl}>
+            <a className="transition hover:text-cream" href={site.yelpUrl}>
               Yelp
             </a>
-            <a className="transition hover:text-paper" href={site.menuSourceUrl}>
+            <a className="transition hover:text-cream" href={site.menuSourceUrl}>
               Menu Source
             </a>
           </div>
@@ -82,17 +82,17 @@ export function SiteFooter() {
 
         <div className="scroll-reveal reveal-right reveal-stagger-2">
           <h3 className="footer-title">Visit</h3>
-          <div className="mt-5 text-sm leading-6 text-paper/62">
-            <p className="font-bold text-paper">{location.name}</p>
+          <div className="mt-5 text-sm leading-6 text-ink/68">
+            <p className="font-bold text-ink">{location.name}</p>
             <p>{location.address}</p>
-            <a className="transition hover:text-paper" href={location.phoneHref}>
+            <a className="transition hover:text-cream" href={location.phoneHref}>
               {location.phone}
             </a>
           </div>
         </div>
       </div>
 
-      <div className="scroll-reveal reveal-up mx-auto mt-12 flex max-w-7xl flex-col gap-4 border-t border-paper/10 pt-6 text-xs uppercase tracking-[0.18em] text-paper/42 sm:flex-row sm:items-center sm:justify-between">
+      <div className="scroll-reveal reveal-up mx-auto mt-12 flex max-w-7xl flex-col gap-4 border-t border-ink/10 pt-6 text-xs uppercase text-ink/52 sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 Tangra Masala. All rights reserved.</p>
         <p>
           Made by{" "}
@@ -107,8 +107,8 @@ export function SiteFooter() {
 
 export function SignatureTicker() {
   return (
-    <section className="overflow-hidden border-y border-ink bg-red py-4 text-paper">
-      <div className="ticker-track flex min-w-max gap-8 text-sm font-black uppercase tracking-[0.22em]">
+    <section className="overflow-hidden border-y border-forest/30 bg-forest/25 py-4 text-ink">
+      <div className="ticker-track flex min-w-max gap-8 text-sm font-black uppercase">
         {[...signatures, ...signatures, ...signatures].map((item, index) => (
           <span className="flex items-center gap-8" key={`${item}-${index}`}>
             {item}
@@ -132,22 +132,22 @@ export function PageIntro({
   text: string;
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-ink px-5 pb-16 pt-32 text-paper sm:px-8 lg:pb-20">
+    <section className="relative isolate overflow-hidden bg-forest px-5 pb-16 pt-32 text-ink sm:px-8 lg:pb-20">
       {image && (
         <>
           <div
-            className="intro-image pointer-events-none absolute inset-0 -z-20 bg-cover bg-center opacity-[0.24]"
+            className="intro-image pointer-events-none absolute inset-0 -z-20 bg-cover bg-center opacity-[0.18]"
             style={{ backgroundImage: `url(${image})` }}
           />
-          <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(23,20,16,0.98),rgba(23,20,16,0.82),rgba(23,20,16,0.48))]" />
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(237,246,239,0.94),rgba(237,246,239,0.82),rgba(111,159,124,0.5))]" />
         </>
       )}
       <div className="scroll-reveal reveal-left intro-copy mx-auto max-w-7xl">
-        <p className="eyebrow text-gold">{eyebrow}</p>
-        <h1 className="mt-5 max-w-4xl font-serif text-5xl font-black leading-[0.94] sm:text-7xl">
+        <p className="eyebrow text-red">{eyebrow}</p>
+        <h1 className="mt-5 max-w-4xl font-serif text-5xl font-black uppercase leading-[0.94] sm:text-7xl">
           {title}
         </h1>
-        <p className="mt-7 max-w-2xl text-lg leading-8 text-paper/72">{text}</p>
+        <p className="mt-7 max-w-2xl text-lg leading-8 text-ink/72">{text}</p>
       </div>
     </section>
   );
@@ -198,10 +198,10 @@ export function MenuCard({
     >
       <div className="flex items-start justify-between gap-6">
         <div>
-          <p className="font-serif text-6xl font-black text-red/18">
+          <p className="font-serif text-6xl font-black text-forest/30">
             {String(index + 1).padStart(2, "0")}
           </p>
-          <h3 className="mt-2 font-serif text-3xl font-black">{title}</h3>
+          <h3 className="mt-2 font-serif text-3xl font-black uppercase">{title}</h3>
         </div>
         {note && (
           <p className="hidden max-w-[11rem] text-right text-xs font-semibold leading-5 text-ink/46 sm:block">
@@ -235,7 +235,7 @@ export function MenuCard({
 
 export function ImageBand() {
   return (
-    <section className="image-band grid bg-black sm:grid-cols-2 lg:grid-cols-4">
+    <section className="image-band grid sm:grid-cols-2 lg:grid-cols-4">
       {galleryImages.map((image, index) => (
         <figure
           className={`image-tile scroll-reveal ${
@@ -255,7 +255,7 @@ export function ImageBand() {
 export function LocationCards({ compact = false }: { compact?: boolean }) {
   return (
     <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-      <article className="location-card scroll-reveal reveal-left overflow-hidden border border-ink bg-cream shadow-[10px_10px_0_#124331]">
+      <article className="location-card scroll-reveal reveal-left overflow-hidden border border-forest/40 bg-cream shadow-[10px_10px_0_rgba(111,159,124,0.38)]">
         <div className="relative min-h-72 overflow-hidden bg-ink">
           <img
             alt={location.imageAlt}
@@ -266,9 +266,9 @@ export function LocationCards({ compact = false }: { compact?: boolean }) {
           <p className="absolute bottom-5 left-5 eyebrow text-gold">{location.shortName}</p>
         </div>
       </article>
-      <article className="location-card scroll-reveal reveal-right border border-ink bg-paper p-7 shadow-[10px_10px_0_#171410]">
+      <article className="location-card scroll-reveal reveal-right border border-forest/40 bg-paper p-7 shadow-[10px_10px_0_rgba(111,159,124,0.38)]">
         <p className="eyebrow text-red">Original location</p>
-        <h3 className="mt-4 font-serif text-4xl font-black sm:text-5xl">
+        <h3 className="mt-4 font-serif text-4xl font-black uppercase sm:text-5xl">
           {location.name}
         </h3>
         <p className="mt-5 text-lg font-semibold leading-7">{location.address}</p>

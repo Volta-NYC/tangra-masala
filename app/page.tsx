@@ -4,7 +4,6 @@ import {
   ImageBand,
   LocationCards,
   MenuGrid,
-  SignatureTicker,
   SiteFooter,
   SiteHeader,
 } from "./components";
@@ -15,67 +14,66 @@ export default function Home() {
     <main className="min-h-screen bg-paper text-ink">
       <SiteHeader />
 
-      <section className="hero-scroll relative isolate flex min-h-screen overflow-hidden bg-forest px-5 pt-24 text-paper sm:px-8">
-        <div
-          className="hero-scroll-image pointer-events-none absolute inset-0 -z-20 bg-cover bg-center opacity-50"
-          style={{ backgroundImage: `url(${images.hero})` }}
-        />
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(18,67,49,0.98),rgba(18,67,49,0.82),rgba(23,20,16,0.3))]" />
-        <div className="mx-auto grid w-full max-w-7xl items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.72fr]">
-          <div className="scroll-reveal reveal-left is-visible">
-            <p className="eyebrow text-gold">Elmhurst's Indo-Chinese original</p>
-            <h1 className="scroll-headline mt-5 max-w-4xl font-serif text-6xl font-black leading-[0.9] sm:text-7xl lg:text-8xl">
-              Tangra Masala on Grand Avenue.
+      <section className="hero-shell relative isolate overflow-hidden bg-paper">
+        <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-2/3 bg-forest/30" />
+        <div className="mx-auto grid w-full max-w-7xl items-end gap-8 lg:grid-cols-[0.86fr_1.14fr]">
+          <div className="hero-panel scroll-reveal reveal-left is-visible p-7 sm:p-10 lg:mb-12">
+            <p className="eyebrow text-red">Elmhurst Indo-Chinese kitchen</p>
+            <h1 className="scroll-headline mt-5 max-w-3xl font-serif text-6xl font-black uppercase leading-[0.84] text-ink sm:text-7xl lg:text-8xl">
+              Tangra Masala
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-paper/76">
-              The compact Queens storefront known for Chinese cuisine Indian
-              style: halal meat, fiery Manchurian sauces, Hakka noodles,
-              Tangra masala fish, paneer, tiger prawns, and the lollypop
-              chicken people plan a trip around.
+            <p className="mt-5 max-w-xl text-xl font-bold leading-8 text-forest-dark">
+              87-09 Grand Avenue. Halal meat, Hakka noodles, Manchurian sauce,
+              Tangra masala fish, paneer, tiger prawns, and lollypop chicken.
             </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <a className="button button-gold" href="/menu">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a className="button button-dark" href="/menu">
                 Explore Menu
               </a>
-              <a className="button button-outline-light" href="/locations">
-                Visit Us
+              <a className="button button-outline-dark" href="/locations">
+                Visit Grand Avenue
               </a>
-              <a className="button button-ghost" href={location.phoneHref}>
-                Call Elmhurst
+              <a className="button button-gold" href={location.phoneHref}>
+                Call Now
               </a>
             </div>
           </div>
 
-          <aside className="hidden lg:block">
-            <div className="scroll-reveal reveal-right is-visible border border-paper/18 bg-paper/10 p-6 shadow-2xl shadow-black/40 backdrop-blur">
-              <p className="eyebrow text-gold">House signatures</p>
-              <div className="mt-6 grid gap-3">
-                {signatures.map((item) => (
-                  <div
-                    className="flex items-center justify-between border-b border-paper/12 pb-3 font-serif text-2xl font-bold"
-                    key={item}
-                  >
-                    <span>{item}</span>
-                    <span className="text-gold">+</span>
-                  </div>
-                ))}
-              </div>
+          <div className="hero-photo-stack scroll-reveal reveal-right is-visible">
+            <figure className="hero-photo">
+              <img alt="Tangra Masala storefront" src={images.hero} />
+            </figure>
+            <div className="grid gap-4 sm:grid-cols-[0.9fr_1.1fr]">
+              <figure className="hero-photo">
+                <img alt="Tangra Masala fried rice" src={images.friedRice} />
+              </figure>
+              <aside className="bg-cream/90 p-6">
+                <p className="eyebrow text-red">House rhythm</p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {signatures.map((item) => (
+                    <span
+                      className="border border-forest/30 bg-forest/15 px-3 py-2 text-sm font-black text-forest-dark"
+                      key={item}
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </aside>
             </div>
-          </aside>
+          </div>
         </div>
       </section>
 
-      <SignatureTicker />
-
-      <section className="section-rise px-5 py-20 sm:px-8 lg:py-28">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.82fr_1fr] lg:items-center">
-          <div className="scroll-reveal reveal-left">
+      <section className="section-rise bg-cream px-5 py-20 sm:px-8 lg:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.58fr_1.42fr] lg:items-start">
+          <div className="scroll-reveal reveal-left border-l-8 border-forest/50 pl-6">
             <p className="eyebrow text-red">About Masala</p>
-            <h2 className="mt-4 font-serif text-4xl font-black leading-tight sm:text-5xl">
+            <h2 className="mt-4 font-serif text-4xl font-black uppercase leading-tight sm:text-5xl">
               The Elmhurst room that made Tangra a craving.
             </h2>
           </div>
-          <div className="scroll-reveal reveal-right">
+          <div className="scroll-reveal reveal-right grid gap-6 lg:grid-cols-[1fr_0.72fr]">
             <p className="text-lg leading-8 text-ink/72">
               Tangra Masala keeps the focus on the original Grand Avenue
               experience: no-fuss Queens dining, generous shared plates, and
@@ -83,27 +81,35 @@ export default function Home() {
               Build the table around dry-or-gravy sauces, spicy soups, noodles,
               fried rice, and crisp starters.
             </p>
-            <Link className="button button-dark mt-8" href="/story">
-              Read Story
-            </Link>
+            <div className="bg-forest/20 p-6">
+              <p className="eyebrow text-forest-dark">Order style</p>
+              <p className="mt-4 text-base font-bold leading-7 text-ink/70">
+                Start crisp, add soup, split rice or noodles, then choose dry
+                or gravy for the main plates.
+              </p>
+              <Link className="button button-dark mt-6" href="/story">
+                Read Story
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="section-rise bg-cream px-5 py-20 sm:px-8 lg:py-28">
-        <div className="mx-auto max-w-7xl">
-          <div className="scroll-reveal reveal-up flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <p className="eyebrow text-red">Menu preview</p>
-              <h2 className="mt-4 max-w-3xl font-serif text-4xl font-black leading-tight sm:text-5xl">
-                Wok-fired, spicy, and built for Elmhurst regulars.
-              </h2>
-            </div>
-            <Link className="button button-dark shrink-0" href="/menu">
+      <section className="section-rise kitchen-board px-5 py-20 sm:px-8 lg:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.74fr_1.26fr]">
+          <div className="scroll-reveal reveal-left">
+            <p className="eyebrow text-red">Menu preview</p>
+            <h2 className="mt-4 max-w-xl font-serif text-4xl font-black uppercase leading-tight sm:text-5xl">
+              Wok-fired, spicy, and built for Elmhurst regulars.
+            </h2>
+            <figure className="menu-strip mt-8">
+              <img alt="Tangra-style chilli chicken" src={images.chilliChicken} />
+            </figure>
+            <Link className="button button-dark mt-8" href="/menu">
               Full Menu
             </Link>
           </div>
-          <div className="mt-12">
+          <div className="mt-2 lg:mt-16">
             <MenuGrid compact />
           </div>
         </div>
@@ -111,24 +117,24 @@ export default function Home() {
 
       <ImageBand />
 
-      <section className="split-scroll grid bg-ink text-paper lg:grid-cols-2">
-        <div
-          className="image-pan min-h-[28rem] bg-cover bg-center"
-          style={{ backgroundImage: `url(${images.friedRice})` }}
-        />
+      <section className="split-scroll grid bg-forest/30 text-ink lg:grid-cols-[1.15fr_0.85fr]">
         <div className="flex items-center px-5 py-20 sm:px-8 lg:px-16">
           <div className="scroll-reveal reveal-right">
-            <p className="eyebrow text-gold">Halal meat</p>
-            <h2 className="mt-4 max-w-xl font-serif text-4xl font-black leading-tight sm:text-5xl">
+            <p className="eyebrow text-red">Halal meat</p>
+            <h2 className="mt-4 max-w-xl font-serif text-4xl font-black uppercase leading-tight sm:text-5xl">
               Familiar comfort, finished with Tangra heat.
             </h2>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-paper/70">
+            <p className="mt-6 max-w-xl text-lg leading-8 text-ink/70">
               Order the table around contrast: crispy chicken and pakora,
               peppery soups, fragrant fried rice, Hakka noodles, seafood, goat,
               tofu, paneer, and the house masala sauces that tie it together.
             </p>
           </div>
         </div>
+        <div
+          className="image-pan min-h-[28rem] bg-cover bg-center"
+          style={{ backgroundImage: `url(${images.friedRice})` }}
+        />
       </section>
 
       <section className="section-rise px-5 py-20 sm:px-8 lg:py-28">
@@ -136,7 +142,7 @@ export default function Home() {
           <div className="scroll-reveal reveal-up flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="eyebrow text-red">Visit</p>
-              <h2 className="mt-4 font-serif text-4xl font-black leading-tight sm:text-5xl">
+              <h2 className="mt-4 font-serif text-4xl font-black uppercase leading-tight sm:text-5xl">
                 One Grand Avenue destination.
               </h2>
             </div>

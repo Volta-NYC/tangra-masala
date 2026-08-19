@@ -24,7 +24,7 @@ export default function StoryPage() {
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.72fr_1fr]">
           <div className="scroll-reveal reveal-left">
             <p className="eyebrow text-red">About Tangra</p>
-            <h2 className="mt-4 font-serif text-4xl font-black leading-tight sm:text-5xl">
+            <h2 className="mt-4 font-serif text-4xl font-black uppercase leading-tight sm:text-5xl">
               From Kolkata's Tangra flavors to Queens tables.
             </h2>
             <Link className="button button-dark mt-8" href="/menu">
@@ -39,18 +39,18 @@ export default function StoryPage() {
         </div>
       </section>
       <ImageBand />
-      <section className="grid bg-ink text-paper lg:grid-cols-2">
+      <section className="grid bg-forest/30 text-ink lg:grid-cols-2">
         <div
           className="image-pan min-h-[28rem] bg-cover bg-center"
           style={{ backgroundImage: `url(${images.chilliChicken})` }}
         />
         <div className="flex items-center px-5 py-20 sm:px-8 lg:px-16">
           <div className="scroll-reveal reveal-right">
-            <p className="eyebrow text-gold">What to order</p>
-            <h2 className="mt-4 max-w-xl font-serif text-4xl font-black leading-tight sm:text-5xl">
+            <p className="eyebrow text-red">What to order</p>
+            <h2 className="mt-4 max-w-xl font-serif text-4xl font-black uppercase leading-tight sm:text-5xl">
               Lolly pop chicken, chilli fish, Manchurian fried rice.
             </h2>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-paper/70">
+            <p className="mt-6 max-w-xl text-lg leading-8 text-ink/70">
               The menu keeps its focus on crisp textures, bright spice, and
               generous family-style plates.
             </p>

@@ -15,7 +15,7 @@ export default function LocationsPage() {
         <div className="mx-auto max-w-7xl">
           <div className="scroll-reveal reveal-left max-w-3xl">
             <p className="eyebrow text-red">Visit</p>
-            <h2 className="mt-4 font-serif text-4xl font-black leading-tight sm:text-5xl">
+            <h2 className="mt-4 font-serif text-4xl font-black uppercase leading-tight sm:text-5xl">
               Hours, calls, and directions for Grand Avenue.
             </h2>
           </div>

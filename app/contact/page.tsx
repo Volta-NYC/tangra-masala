@@ -16,11 +16,11 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="scroll-reveal reveal-left">
             <p className="eyebrow text-red">Reach us</p>
-            <h2 className="mt-4 font-serif text-4xl font-black leading-tight sm:text-5xl">
+            <h2 className="mt-4 font-serif text-4xl font-black uppercase leading-tight sm:text-5xl">
               For fastest service, call Grand Avenue.
             </h2>
             <article className="mt-8 border border-ink/12 bg-cream p-5">
-              <h3 className="font-serif text-2xl font-black">{location.name}</h3>
+              <h3 className="font-serif text-2xl font-black uppercase">{location.name}</h3>
               <p className="mt-2 text-sm font-semibold text-ink/62">
                 {location.address}
               </p>
@@ -32,7 +32,7 @@ export default function ContactPage() {
 
           <aside className="scroll-reveal reveal-right border border-ink bg-cream p-6 shadow-[10px_10px_0_#171410] sm:p-8">
             <p className="eyebrow text-red">Call ahead</p>
-            <h2 className="mt-4 font-serif text-4xl font-black leading-tight sm:text-5xl">
+            <h2 className="mt-4 font-serif text-4xl font-black uppercase leading-tight sm:text-5xl">
               Check hours and menu availability before you go.
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-8 text-ink/68">
@@ -56,7 +56,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl">
           <div className="scroll-reveal reveal-up max-w-3xl">
             <p className="eyebrow text-red">Visit</p>
-            <h2 className="mt-4 font-serif text-4xl font-black leading-tight sm:text-5xl">
+            <h2 className="mt-4 font-serif text-4xl font-black uppercase leading-tight sm:text-5xl">
               Find Tangra Masala in Elmhurst.
             </h2>
           </div>
