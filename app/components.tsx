@@ -147,7 +147,7 @@ export function PageIntro({
             className="intro-image pointer-events-none absolute inset-0 -z-20 bg-cover bg-center opacity-[0.18]"
             style={{ backgroundImage: `url(${image})` }}
           />
-          <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(11,16,32,0.98),rgba(11,16,32,0.86),rgba(82,105,255,0.42))]" />
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(42,23,39,0.98),rgba(42,23,39,0.86),rgba(51,104,95,0.42))]" />
         </>
       )}
       <div className="scroll-reveal reveal-left intro-copy mx-auto max-w-7xl">
@@ -204,19 +204,21 @@ export function MenuCard({
       } border border-ink/12 bg-paper p-7 shadow-[8px_8px_0_rgba(18,67,49,0.1)]`}
       style={{ transitionDelay: `${Math.min(index, 5) * 80}ms` }}
     >
-      <div className="flex items-start justify-between gap-6">
-        <div>
-          <p className="font-serif text-6xl font-black text-forest/30">
+      <header className="menu-card-header">
+        <div className="menu-card-heading">
+          <p className="menu-card-number font-serif text-6xl font-black text-forest/30">
             {index + 1}
           </p>
-          <h3 className="mt-2 font-serif text-3xl font-black uppercase">{title}</h3>
+          <h3 className="menu-card-title mt-2 font-serif text-3xl font-black uppercase">
+            {title}
+          </h3>
         </div>
         {note && (
-          <p className="hidden max-w-[11rem] text-right text-xs font-semibold leading-5 text-ink/46 sm:block">
+          <p className="menu-card-note text-xs font-semibold leading-5 text-ink/46">
             {note}
           </p>
         )}
-      </div>
+      </header>
 
       <ul className="mt-6 space-y-5">
         {items.map((item) => (
@@ -248,7 +250,7 @@ export function ImageBand() {
 export function LocationCards({ compact = false }: { compact?: boolean }) {
   return (
     <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-      <article className="location-card scroll-reveal reveal-left overflow-hidden border border-forest/40 bg-cream shadow-[10px_10px_0_rgba(111,159,124,0.38)]">
+      <article className="location-card scroll-reveal reveal-left overflow-hidden border border-forest/40 bg-cream">
         <div className="relative min-h-72 overflow-hidden bg-ink">
           <img
             alt={location.imageAlt}
@@ -259,7 +261,7 @@ export function LocationCards({ compact = false }: { compact?: boolean }) {
           <p className="absolute bottom-5 left-5 eyebrow text-gold">{location.shortName}</p>
         </div>
       </article>
-      <article className="location-card scroll-reveal reveal-right border border-forest/40 bg-paper p-7 shadow-[10px_10px_0_rgba(111,159,124,0.38)]">
+      <article className="location-card scroll-reveal reveal-right border border-forest/40 bg-paper p-7">
         <p className="eyebrow text-red">Original location</p>
         <h3 className="mt-4 font-serif text-4xl font-black uppercase sm:text-5xl">
           {location.name}
