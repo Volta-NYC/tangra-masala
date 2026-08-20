@@ -8,6 +8,7 @@ import {
   signatures,
   site,
 } from "./content";
+import { SpinGallery } from "./spin-gallery";
 
 type MenuItem = (typeof menuSections)[number]["items"][number];
 
@@ -199,7 +200,7 @@ export function MenuCard({
       <div className="flex items-start justify-between gap-6">
         <div>
           <p className="font-serif text-6xl font-black text-forest/30">
-            {String(index + 1).padStart(2, "0")}
+            {index + 1}
           </p>
           <h3 className="mt-2 font-serif text-3xl font-black uppercase">{title}</h3>
         </div>
@@ -234,22 +235,7 @@ export function MenuCard({
 }
 
 export function ImageBand() {
-  return (
-    <section className="image-band grid sm:grid-cols-2 lg:grid-cols-4">
-      {galleryImages.map((image, index) => (
-        <figure
-          className={`image-tile scroll-reveal ${
-            index % 2 === 0 ? "reveal-left" : "reveal-right"
-          }`}
-          style={{ transitionDelay: `${index * 70}ms` }}
-          key={image.src}
-        >
-          <img alt={image.alt} src={image.src} />
-          <figcaption>{image.label}</figcaption>
-        </figure>
-      ))}
-    </section>
-  );
+  return <SpinGallery images={galleryImages} />;
 }
 
 export function LocationCards({ compact = false }: { compact?: boolean }) {

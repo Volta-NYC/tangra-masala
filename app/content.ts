@@ -35,6 +35,8 @@ export const images = {
   tangraPlate: "https://www.indiafoodnetwork.in/h-upload/2022/11/16/834446-3.webp",
 };
 
+const tangraGalleryBase = "https://whereyoueat.com/r_gallery_images/rgallery-14735";
+
 export const menuSections = [
   {
     title: "Tangra Sauces",
@@ -311,6 +313,66 @@ export const galleryImages = [
     src: images.awning,
     alt: "Tangra Masala green awning",
     label: "Indian-style Chinese",
+  },
+  {
+    src: `${tangraGalleryBase}/Tangra_Masala1.jpg`,
+    alt: "Tangra Masala dish from the restaurant gallery",
+    label: "House platter",
+  },
+  {
+    src: `${tangraGalleryBase}/Tangra_Masala3.jpg`,
+    alt: "Tangra Masala saucy Indo-Chinese plate",
+    label: "Masala sauce",
+  },
+  {
+    src: `${tangraGalleryBase}/Tangra_Masala4.jpg`,
+    alt: "Tangra Masala fried appetizer plate",
+    label: "Crisp starters",
+  },
+  {
+    src: `${tangraGalleryBase}/Tangra_Masala5.jpg`,
+    alt: "Tangra Masala noodle or rice dish",
+    label: "Wok comfort",
+  },
+  {
+    src: `${tangraGalleryBase}/Tangra_Masala6.jpg`,
+    alt: "Tangra Masala family-style plate",
+    label: "Table favorite",
+  },
+  {
+    src: `${tangraGalleryBase}/Tangra_Masala7.jpg`,
+    alt: "Tangra Masala Indo-Chinese entree",
+    label: "Tangra heat",
+  },
+  {
+    src: `${tangraGalleryBase}/Tangra_Masala8.jpg`,
+    alt: "Tangra Masala restaurant dish",
+    label: "Shared plate",
+  },
+  {
+    src: `${tangraGalleryBase}/Tangra_Masala10.jpg`,
+    alt: "Tangra Masala curry or gravy dish",
+    label: "Dry or gravy",
+  },
+  {
+    src: `${tangraGalleryBase}/Tangra_Masala11.jpg`,
+    alt: "Tangra Masala kitchen specialty",
+    label: "Elmhurst staple",
+  },
+  {
+    src: `${tangraGalleryBase}/Tangra_Masala12.jpg`,
+    alt: "Tangra Masala sauced entree",
+    label: "House rhythm",
+  },
+  {
+    src: `${tangraGalleryBase}/Tangra_Masala13.jpg`,
+    alt: "Tangra Masala Indo-Chinese food plate",
+    label: "Chilli finish",
+  },
+  {
+    src: `${tangraGalleryBase}/Tangra_Masala18.jpg`,
+    alt: "Tangra Masala food served family-style",
+    label: "Family order",
   },
 ];
 
