@@ -258,8 +258,8 @@ a {
 
 .hero-shell::before {
   background:
-    linear-gradient(90deg, rgb(15 36 25 / 0.88), rgb(36 76 54 / 0.7), rgb(111 159 124 / 0.42)),
-    linear-gradient(0deg, rgb(15 36 25 / 0.84), transparent 48%);
+    linear-gradient(90deg, rgb(15 36 25 / 0.52), rgb(36 76 54 / 0.28), rgb(111 159 124 / 0.08)),
+    linear-gradient(0deg, rgb(15 36 25 / 0.56), transparent 42%);
   content: "";
   inset: 0;
   position: absolute;
@@ -267,7 +267,7 @@ a {
 }
 
 .hero-shell::after {
-  background: rgb(111 159 124 / 0.24);
+  background: rgb(111 159 124 / 0.08);
   content: "";
   inset: 0;
   mix-blend-mode: soft-light;

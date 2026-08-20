@@ -14,7 +14,7 @@ type MenuItem = (typeof menuSections)[number]["items"][number];
 
 export function SiteHeader() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-cream/12 bg-[#0f2419]/88 text-cream backdrop-blur">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-cream/12 bg-[#244c36]/72 text-cream backdrop-blur">
       <div className="scroll-progress" />
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
         <Link className="leading-none" href="/" aria-label="Tangra Masala home">
