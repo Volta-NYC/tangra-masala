@@ -4,7 +4,6 @@ import { useEffect, useMemo, useRef } from "react";
 
 type GalleryImage = {
   alt: string;
-  label: string;
   src: string;
 };
 
@@ -173,7 +172,6 @@ export function SpinGallery({ images }: { images: GalleryImage[] }) {
                 key={`${image.src}-${index}`}
               >
                 <img alt={index < images.length ? image.alt : ""} src={image.src} />
-                <figcaption>{image.label}</figcaption>
               </figure>
             ))}
           </div>

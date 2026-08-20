@@ -295,74 +295,40 @@ export const location = {
 
 export const galleryImages = [
   {
-    src: images.friedRice,
-    alt: "Tangra Masala fried rice served with steamed rice",
-    label: "Wok-fired rice",
-  },
-  {
-    src: images.chilliChicken,
-    alt: "Tangra-style chilli chicken with peppers and onions",
-    label: "Chilli heat",
-  },
-  {
-    src: `${tangraGalleryBase}/Tangra_Masala1.jpg`,
-    alt: "Tangra Masala dish from the restaurant gallery",
-    label: "House platter",
-  },
-  {
-    src: `${tangraGalleryBase}/Tangra_Masala3.jpg`,
-    alt: "Tangra Masala saucy Indo-Chinese plate",
-    label: "Masala sauce",
-  },
-  {
     src: `${tangraGalleryBase}/Tangra_Masala4.jpg`,
-    alt: "Tangra Masala fried appetizer plate",
-    label: "Crisp starters",
+    alt: "Food from Tangra Masala",
   },
   {
     src: `${tangraGalleryBase}/Tangra_Masala5.jpg`,
-    alt: "Tangra Masala noodle or rice dish",
-    label: "Wok comfort",
+    alt: "Food from Tangra Masala",
   },
   {
     src: `${tangraGalleryBase}/Tangra_Masala6.jpg`,
-    alt: "Tangra Masala family-style plate",
-    label: "Table favorite",
+    alt: "Food from Tangra Masala",
   },
   {
     src: `${tangraGalleryBase}/Tangra_Masala7.jpg`,
-    alt: "Tangra Masala Indo-Chinese entree",
-    label: "Tangra heat",
-  },
-  {
-    src: `${tangraGalleryBase}/Tangra_Masala8.jpg`,
-    alt: "Tangra Masala restaurant dish",
-    label: "Shared plate",
+    alt: "Food from Tangra Masala",
   },
   {
     src: `${tangraGalleryBase}/Tangra_Masala10.jpg`,
-    alt: "Tangra Masala curry or gravy dish",
-    label: "Dry or gravy",
-  },
-  {
-    src: `${tangraGalleryBase}/Tangra_Masala11.jpg`,
-    alt: "Tangra Masala kitchen specialty",
-    label: "Elmhurst staple",
+    alt: "Food from Tangra Masala",
   },
   {
     src: `${tangraGalleryBase}/Tangra_Masala12.jpg`,
-    alt: "Tangra Masala sauced entree",
-    label: "House rhythm",
+    alt: "Food from Tangra Masala",
   },
   {
     src: `${tangraGalleryBase}/Tangra_Masala13.jpg`,
-    alt: "Tangra Masala Indo-Chinese food plate",
-    label: "Chilli finish",
+    alt: "Food from Tangra Masala",
   },
   {
     src: `${tangraGalleryBase}/Tangra_Masala18.jpg`,
-    alt: "Tangra Masala food served family-style",
-    label: "Family order",
+    alt: "Food from Tangra Masala",
+  },
+  {
+    src: `${tangraGalleryBase}/Tangra_Masala19.jpg`,
+    alt: "Food from Tangra Masala",
   },
 ];
 

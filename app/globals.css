@@ -505,30 +505,9 @@ a {
   width: 100%;
 }
 
-.spin-gallery-card::after {
-  background: linear-gradient(to top, rgb(15 36 25 / 0.82), transparent 58%);
-  content: "";
-  inset: 0.625rem;
-  pointer-events: none;
-  position: absolute;
-}
-
 .spin-gallery-card:hover img {
   filter: saturate(1.1);
   transform: scale(1.04);
-}
-
-.spin-gallery-card figcaption {
-  bottom: 1.5rem;
-  color: var(--cream);
-  font-size: 0.78rem;
-  font-weight: 900;
-  left: 1.5rem;
-  line-height: 1.2;
-  position: absolute;
-  right: 1.5rem;
-  text-transform: uppercase;
-  z-index: 1;
 }
 
 .location-card {
