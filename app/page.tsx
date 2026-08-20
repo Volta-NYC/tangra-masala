@@ -8,58 +8,65 @@ import {
   SiteHeader,
 } from "./components";
 import { images, location, signatures } from "./content";
+import { WokField } from "./wok-field";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-paper text-ink">
       <SiteHeader />
 
-      <section
-        className="hero-shell"
-        style={{ backgroundImage: `url(${images.hero})` }}
-      >
+      <section className="hero-shell">
+        <WokField />
+        <div className="hero-orbit hero-orbit-one" aria-hidden="true" />
+        <div className="hero-orbit hero-orbit-two" aria-hidden="true" />
         <div className="hero-content-grid">
           <div className="hero-copy-block scroll-reveal reveal-left is-visible">
-            <p className="eyebrow text-gold">Elmhurst Indo-Chinese kitchen</p>
+            <p className="eyebrow hero-kicker">Elmhurst, Queens · Chinese-Indian kitchen</p>
             <h1 className="hero-title scroll-headline mt-5 font-serif">
-              Tangra Masala.
+              Wok-born.<br />
+              <em>Queens</em> raised.
             </h1>
             <p className="hero-copy mt-7">
-              The Grand Avenue storefront for halal meat, Hakka noodles,
-              Manchurian sauce, Tangra masala fish, paneer, tiger prawns, and
-              lollypop chicken.
+              Indo-Chinese cooking with a live-wire edge. Follow the sizzle to
+              Grand Avenue for Hakka noodles, smoky Manchurian, crisp starters,
+              and house masala made for passing around.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <a className="button button-gold" href="/menu">
-                Explore Menu
+              <a className="button button-electric" href="/menu">
+                Enter the Menu <span aria-hidden="true">↗</span>
               </a>
               <a className="button button-outline-light" href="/locations">
-                Visit Us
+                Find our table
               </a>
-              <a className="button button-ghost" href={location.phoneHref}>
-                Call Elmhurst
-              </a>
+            </div>
+            <div className="hero-meta" aria-label="Restaurant details">
+              <span>Halal meat</span><span>Hakka noodles</span><span>Big flavors</span>
             </div>
           </div>
 
           <aside className="signature-panel scroll-reveal reveal-right is-visible">
-            <p className="eyebrow text-gold">House signatures</p>
+            <div className="signature-panel-top">
+              <p className="eyebrow">The hit list</p>
+              <span>01 — 05</span>
+            </div>
             {signatures.slice(0, 5).map((item) => (
               <div className="signature-panel-row" key={item}>
                 <span>{item}</span>
-                <span>+</span>
+                <span>↗</span>
               </div>
             ))}
+            <a className="signature-link" href={location.phoneHref}>Call for takeout <span>→</span></a>
           </aside>
         </div>
+        <div className="hero-index" aria-hidden="true"><span>01</span><i /><span>Scroll to stir</span></div>
       </section>
 
-      <section className="section-rise bg-cream px-5 py-20 sm:px-8 lg:py-24">
+      <section className="section-rise intro-section bg-cream px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.58fr_1.42fr] lg:items-start">
-          <div className="scroll-reveal reveal-left border-l-8 border-forest/50 pl-6">
-            <p className="eyebrow text-red">About Masala</p>
+          <div className="scroll-reveal reveal-left section-heading">
+            <p className="eyebrow text-red">The Tangra code</p>
             <h2 className="mt-4 font-serif text-4xl font-black uppercase leading-tight sm:text-5xl">
-              The Elmhurst room that made Tangra a craving.
+              Heat. Crunch.<br />&amp; repeat.
             </h2>
           </div>
           <div className="scroll-reveal reveal-right grid gap-6 lg:grid-cols-[1fr_0.72fr]">
@@ -70,14 +77,14 @@ export default function Home() {
               Build the table around dry-or-gravy sauces, spicy soups, noodles,
               fried rice, and crisp starters.
             </p>
-            <div className="bg-forest/20 p-6">
-              <p className="eyebrow text-forest-dark">Order style</p>
+            <div className="order-note p-6">
+              <p className="eyebrow text-forest-dark">Order like a regular</p>
               <p className="mt-4 text-base font-bold leading-7 text-ink/70">
                 Start crisp, add soup, split rice or noodles, then choose dry
                 or gravy for the main plates.
               </p>
               <Link className="button button-dark mt-6" href="/story">
-                Read Story
+                Our story <span aria-hidden="true">↗</span>
               </Link>
             </div>
           </div>

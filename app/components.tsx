@@ -14,15 +14,15 @@ type MenuItem = (typeof menuSections)[number]["items"][number];
 
 export function SiteHeader() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-cream/12 bg-[#244c36]/72 text-cream backdrop-blur">
+    <header className="site-header fixed inset-x-0 top-0 z-50 text-cream backdrop-blur">
       <div className="scroll-progress" />
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
         <Link className="leading-none" href="/" aria-label="Tangra Masala home">
           <span className="block font-serif text-3xl font-black">
             Tangra Masala
           </span>
-          <span className="mt-1 block text-[0.72rem] font-black uppercase text-gold">
-            Elmhurst
+          <span className="brand-subline mt-1 block text-[0.72rem] font-black uppercase text-gold">
+            Indo-Chinese · Elmhurst
           </span>
         </Link>
 
@@ -37,8 +37,8 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Link className="button button-gold button-fit" href="/menu">
-          View Menu
+        <Link className="button button-electric button-fit" href="/menu">
+          Menu <span aria-hidden="true">↗</span>
         </Link>
       </div>
     </header>
@@ -47,22 +47,22 @@ export function SiteHeader() {
 
 export function SiteFooter() {
   return (
-    <footer className="footer-glow relative overflow-hidden bg-forest px-5 py-14 text-ink sm:px-8">
+    <footer className="footer-glow relative overflow-hidden bg-ink px-5 py-14 text-cream sm:px-8">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.6fr_1fr]">
         <div className="scroll-reveal reveal-left">
           <p className="font-serif text-4xl font-black uppercase">{site.name}</p>
-          <p className="mt-4 max-w-xl text-sm leading-6 text-ink/64">
+          <p className="mt-4 max-w-xl text-sm leading-6 text-cream/64">
             {site.description}
           </p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-            <Link className="button button-gold" href="/menu">
+            <Link className="button button-electric" href="/menu">
               View Menu
             </Link>
             <a className="button button-outline-light" href={location.phoneHref}>
               Call Elmhurst
             </a>
           </div>
-          <p className="mt-7 text-xs font-black uppercase text-ink/64">
+          <p className="mt-7 text-xs font-black uppercase text-cream/48">
             Made by{" "}
             <a className="volta-link" href="https://www.novusnyc.org/" rel="noreferrer" target="_blank">
               Novus
@@ -72,16 +72,16 @@ export function SiteFooter() {
 
         <div className="scroll-reveal reveal-up reveal-stagger-1">
           <h3 className="footer-title">Explore</h3>
-          <div className="mt-5 grid gap-3 text-sm text-ink/68">
+          <div className="mt-5 grid gap-3 text-sm text-cream/64">
             {navItems.map((item) => (
-              <Link className="transition hover:text-cream" href={item.href} key={item.href}>
+              <Link className="transition hover:text-gold" href={item.href} key={item.href}>
                 {item.label}
               </Link>
             ))}
-            <a className="transition hover:text-cream" href={site.yelpUrl}>
+            <a className="transition hover:text-gold" href={site.yelpUrl}>
               Yelp
             </a>
-            <a className="transition hover:text-cream" href={site.menuSourceUrl}>
+            <a className="transition hover:text-gold" href={site.menuSourceUrl}>
               Menu Source
             </a>
           </div>
@@ -89,17 +89,17 @@ export function SiteFooter() {
 
         <div className="scroll-reveal reveal-right reveal-stagger-2">
           <h3 className="footer-title">Visit</h3>
-          <div className="mt-5 text-sm leading-6 text-ink/68">
-            <p className="font-bold text-ink">{location.name}</p>
+          <div className="mt-5 text-sm leading-6 text-cream/64">
+            <p className="font-bold text-cream">{location.name}</p>
             <p>{location.address}</p>
-            <a className="transition hover:text-cream" href={location.phoneHref}>
+            <a className="transition hover:text-gold" href={location.phoneHref}>
               {location.phone}
             </a>
           </div>
         </div>
       </div>
 
-      <div className="scroll-reveal reveal-up mx-auto mt-12 flex max-w-7xl flex-col gap-4 border-t border-ink/10 pt-6 text-xs uppercase text-ink/52 sm:flex-row sm:items-center sm:justify-between">
+      <div className="scroll-reveal reveal-up mx-auto mt-12 flex max-w-7xl flex-col gap-4 border-t border-cream/10 pt-6 text-xs uppercase text-cream/45 sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 Tangra Masala. All rights reserved.</p>
       </div>
     </footer>
@@ -133,22 +133,22 @@ export function PageIntro({
   text: string;
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-forest px-5 pb-16 pt-32 text-ink sm:px-8 lg:pb-20">
+    <section className="page-intro relative isolate overflow-hidden bg-ink px-5 pb-16 pt-32 text-cream sm:px-8 lg:pb-20">
       {image && (
         <>
           <div
             className="intro-image pointer-events-none absolute inset-0 -z-20 bg-cover bg-center opacity-[0.18]"
             style={{ backgroundImage: `url(${image})` }}
           />
-          <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(237,246,239,0.94),rgba(237,246,239,0.82),rgba(111,159,124,0.5))]" />
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(11,16,32,0.98),rgba(11,16,32,0.86),rgba(82,105,255,0.42))]" />
         </>
       )}
       <div className="scroll-reveal reveal-left intro-copy mx-auto max-w-7xl">
-        <p className="eyebrow text-red">{eyebrow}</p>
+        <p className="eyebrow text-gold">{eyebrow}</p>
         <h1 className="mt-5 max-w-4xl font-serif text-5xl font-black uppercase leading-[0.94] sm:text-7xl">
           {title}
         </h1>
-        <p className="mt-7 max-w-2xl text-lg leading-8 text-ink/72">{text}</p>
+        <p className="mt-7 max-w-2xl text-lg leading-8 text-cream/72">{text}</p>
       </div>
     </section>
   );
