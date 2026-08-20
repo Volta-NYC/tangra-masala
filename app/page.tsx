@@ -7,8 +7,7 @@ import {
   SiteFooter,
   SiteHeader,
 } from "./components";
-import { images, location, signatures } from "./content";
-import { WokField } from "./wok-field";
+import { galleryImages, images, location, signatures } from "./content";
 
 export default function Home() {
   return (
@@ -16,9 +15,11 @@ export default function Home() {
       <SiteHeader />
 
       <section className="hero-shell">
-        <WokField />
-        <div className="hero-orbit hero-orbit-one" aria-hidden="true" />
-        <div className="hero-orbit hero-orbit-two" aria-hidden="true" />
+        <div className="hero-collage" aria-hidden="true">
+          {galleryImages.slice(0, 4).map((image) => (
+            <img key={image.src} src={image.src} alt="" />
+          ))}
+        </div>
         <div className="hero-content-grid">
           <div className="hero-copy-block scroll-reveal reveal-left is-visible">
             <p className="eyebrow hero-kicker">Elmhurst, Queens · Chinese-Indian kitchen</p>

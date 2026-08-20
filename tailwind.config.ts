@@ -5,12 +5,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        paper: "#eaf0f7",
-        cream: "#f7f9fd",
-        ink: "#0b1020",
-        forest: "#5269ff",
-        red: "#ff5d7a",
-        gold: "#d8f34d",
+        paper: "#e7e9e2",
+        cream: "#f4f1e9",
+        ink: "#2a1727",
+        forest: "#33685f",
+        red: "#8e3d54",
+        gold: "#cfb56f",
       },
     },
   },
