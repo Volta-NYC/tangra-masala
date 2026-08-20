@@ -41,6 +41,13 @@ export function SiteHeader() {
           Menu <span aria-hidden="true">↗</span>
         </Link>
       </div>
+      <nav className="mobile-nav md:hidden" aria-label="Primary navigation">
+        {navItems.map((item) => (
+          <Link href={item.href} key={item.href}>
+            {item.label}
+          </Link>
+        ))}
+      </nav>
     </header>
   );
 }

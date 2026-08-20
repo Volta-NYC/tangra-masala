@@ -79,7 +79,7 @@ export function WokField() {
     let start = performance.now();
 
     const resize = () => {
-      const ratio = Math.min(window.devicePixelRatio || 1, 1.5);
+      const ratio = Math.min(window.devicePixelRatio || 1, window.innerWidth < 640 ? 1 : 1.5);
       canvas.width = Math.floor(canvas.clientWidth * ratio);
       canvas.height = Math.floor(canvas.clientHeight * ratio);
       gl.viewport(0, 0, canvas.width, canvas.height);

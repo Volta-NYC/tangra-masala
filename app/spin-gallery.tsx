@@ -34,7 +34,9 @@ export function SpinGallery({ images }: { images: GalleryImage[] }) {
     let isTouching = false;
     let pauseUntil = 0;
     let touchStartX = 0;
+    let touchStartY = 0;
     let touchStartTarget = 0;
+    let isHorizontalSwipe = false;
 
     const measure = () => {
       const firstCard = track.querySelector<HTMLElement>(".spin-gallery-card");
@@ -92,12 +94,23 @@ export function SpinGallery({ images }: { images: GalleryImage[] }) {
     const onTouchStart = (event: TouchEvent) => {
       isTouching = true;
       touchStartX = event.touches[0]?.clientX ?? 0;
+      touchStartY = event.touches[0]?.clientY ?? 0;
       touchStartTarget = targetX;
+      isHorizontalSwipe = false;
     };
 
     const onTouchMove = (event: TouchEvent) => {
       const currentTouchX = event.touches[0]?.clientX ?? touchStartX;
-      targetX = touchStartTarget + (touchStartX - currentTouchX);
+      const currentTouchY = event.touches[0]?.clientY ?? touchStartY;
+      const deltaX = touchStartX - currentTouchX;
+      const deltaY = touchStartY - currentTouchY;
+
+      if (!isHorizontalSwipe && Math.abs(deltaY) > Math.abs(deltaX)) {
+        return;
+      }
+
+      isHorizontalSwipe = true;
+      targetX = touchStartTarget + deltaX;
       normalize();
     };
 
