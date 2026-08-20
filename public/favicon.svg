@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Tangra Masala">
+  <rect width="64" height="64" rx="12" fill="#0f2419"/>
+  <circle cx="50" cy="14" r="8" fill="#d8a84a"/>
+  <path d="M10 18h29v8H29v25h-9V26H10z" fill="#fffaf0"/>
+  <path d="M35 51V18h8l7 13 7-13h7v33h-8V34l-5 10h-3l-5-10v17z" fill="#fffaf0"/>
+  <path d="M8 56h48" stroke="#6f9f7c" stroke-width="4" stroke-linecap="round"/>
+</svg>

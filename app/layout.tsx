@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Tangra Masala | Indo-Chinese Cuisine in Elmhurst",
   description:
     "Tangra Masala serves Chinese cuisine Indian style, halal meat, Tangra masala, Manchurian, Hakka, and chilli dishes in Elmhurst, Queens.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
