@@ -62,6 +62,12 @@ export function SiteFooter() {
               Call Elmhurst
             </a>
           </div>
+          <p className="mt-7 text-xs font-black uppercase text-ink/64">
+            Made by{" "}
+            <a className="volta-link" href="https://www.novusnyc.org/" rel="noreferrer" target="_blank">
+              Novus
+            </a>
+          </p>
         </div>
 
         <div className="scroll-reveal reveal-up reveal-stagger-1">
@@ -95,12 +101,6 @@ export function SiteFooter() {
 
       <div className="scroll-reveal reveal-up mx-auto mt-12 flex max-w-7xl flex-col gap-4 border-t border-ink/10 pt-6 text-xs uppercase text-ink/52 sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 Tangra Masala. All rights reserved.</p>
-        <p>
-          Made by{" "}
-          <a className="volta-link" href="https://www.novusnyc.org/" rel="noreferrer" target="_blank">
-            Novus
-          </a>
-        </p>
       </div>
     </footer>
   );
