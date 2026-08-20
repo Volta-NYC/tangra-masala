@@ -12,6 +12,7 @@
   --forest-soft: rgb(111 159 124 / 0.22);
   --red: #b64a34;
   --gold: #d8a84a;
+  --novus-peach: #f6b78d;
 }
 
 * {
@@ -193,13 +194,13 @@ a {
 }
 
 .volta-link {
-  color: #f6b78d;
+  color: var(--novus-peach);
   font-weight: 900;
   transition: color 180ms ease;
 }
 
 .volta-link:hover {
-  color: #f6b78d;
+  color: var(--novus-peach);
 }
 
 .nav-link {

@@ -295,11 +295,6 @@ export const location = {
 
 export const galleryImages = [
   {
-    src: images.storefront,
-    alt: "Tangra Masala storefront in Elmhurst",
-    label: "Grand Avenue storefront",
-  },
-  {
     src: images.friedRice,
     alt: "Tangra Masala fried rice served with steamed rice",
     label: "Wok-fired rice",
@@ -308,11 +303,6 @@ export const galleryImages = [
     src: images.chilliChicken,
     alt: "Tangra-style chilli chicken with peppers and onions",
     label: "Chilli heat",
-  },
-  {
-    src: images.awning,
-    alt: "Tangra Masala green awning",
-    label: "Indian-style Chinese",
   },
   {
     src: `${tangraGalleryBase}/Tangra_Masala1.jpg`,
